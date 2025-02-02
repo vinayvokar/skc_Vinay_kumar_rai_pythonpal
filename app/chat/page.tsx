@@ -18,7 +18,7 @@ const characters = {
 export default function LearnPage() {
   const params = useParams()
   const characterId = params.character as string
-  const character = characters[characterId as keyof typeof characters]
+  //const character = characters[characterId as keyof typeof characters]
 
   const [messages, setMessages] = useState<{ role: string; content: string }[]>([])
   const [input, setInput] = useState("")
