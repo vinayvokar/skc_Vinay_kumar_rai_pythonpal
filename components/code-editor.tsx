@@ -36,7 +36,7 @@ export default function CodeEditor({ initialCode = "" }: CodeEditorProps) {
       } else {
         setOutput(result.output)
       }
-    } catch (e) {
+    } catch (execption) {
       setError("An error occurred while running your code")
     } finally {
       setIsRunning(false)
