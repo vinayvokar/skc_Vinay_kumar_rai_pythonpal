@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --editor-bg: #1e1e1e;
+  --editor-text: #d4d4d4;
+  --editor-cursor: #fff;
+}
+
+.code-editor {
+  font-family: "Fira Code", monospace;
+  line-height: 1.5;
+  tab-size: 4;
+}
+
+.code-editor::selection {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom scrollbar for the code editor */
+.code-editor::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.code-editor::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-editor::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 4px;
+}
+
+.code-editor::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Animation for the error shake effect */
+@keyframes errorShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.error-shake {
+  animation: errorShake 0.5s ease-in-out;
+}
+
