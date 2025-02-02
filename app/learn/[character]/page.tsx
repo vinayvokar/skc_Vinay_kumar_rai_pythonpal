@@ -22,7 +22,7 @@ export default function LearnPage() {
 
   const [messages, setMessages] = useState<{ role: string; content: string }[]>([])
   const [input, setInput] = useState("")
-  const [currentStep, setCurrentStep] = useState(0)
+  //const [currentStep, setCurrentStep] = useState(0)
 
   const steps = [
     "Let's start by printing 'Hello, World!' using Python.",
